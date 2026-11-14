@@ -1,0 +1,136 @@
+:root {
+--azul: #bd4d4d;
+--escuro: #8b3333;
+--fundo: #ff9898;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: Georgia, 'Times New Roman', serif;
+background: var(--fundo);
+color: var(--escuro);
+line-height: 1.7;
+}
+.cabecalho {
+background: var(--escuro);
+color: white;
+text-align: center;
+padding: 40px 20px 20px;
+}
+.subtitulo {
+opacity: 0.8;
+margin-bottom: 16px;
+}
+.cabecalho nav a {
+color: white;
+margin: 0 12px;
+text-decoration: none;
+font-family: Arial, sans-serif;
+}
+.cabecalho nav a:hover {
+color: var(--azul);
+}
+.layout {
+display: grid;
+grid-template-columns: 2fr 1fr;
+gap: 30px;
+max-width: 1100px;
+margin: 30px auto;
+padding: 0 20px;
+align-items: start;
+}
+.post {
+background: white;
+padding: 30px;
+border-radius: 10px;
+margin-bottom: 24px;
+border-left: 6px solid var(--azul);
+}
+.post:nth-child(even) {
+border-left-color: var(--escuro);
+}
+.post h2 {
+margin-bottom: 6px;
+}
+.post p,
+.post ul,
+.post ol {
+margin-bottom: 14px;
+}
+.post ul,
+.post ol {
+padding-left: 24px;
+}
+.info {
+font-size: 0.9rem;
+color: #c47272;
+font-family: Arial, sans-serif;
+}
+code {
+background: #f4f4f4;
+color: #c0392b;
+padding: 2px 6px;
+border-radius: 4px;
+font-family: 'Courier New', monospace;
+}
+blockquote {
+border-left: 4px solid var(--azul);
+background: #fab3b3;
+padding: 12px 16px;
+font-style: italic;
+margin-bottom: 14px;
+}
+.tags span {
+display: inline-block;
+background: var(--azul);
+color: white;
+font-family: Arial, sans-serif;
+font-size: 0.8rem;
+padding: 4px 12px;
+border-radius: 20px;
+margin-right: 6px;
+}
+.lateral {
+position: sticky;
+top: 20px;
+}
+.bloco {
+background: white;
+padding: 20px;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+.bloco h3 {
+color: var(--azul);
+margin-bottom: 10px;
+}
+.categorias {
+list-style: none;
+}
+.categorias li {
+padding: 8px;
+}
+.categorias li:nth-child(odd) {
+background: var(--fundo);
+}
+.categorias a {
+color: var(--escuro);
+text-decoration: none;
+}
+footer {
+text-align: center;
+padding: 24px;
+background: var(--escuro);
+color: white;
+}
+@media (max-width: 800px) {
+.layout {
+grid-template-columns: 1fr;
+}
+.lateral {
+position: static;
+}
+}
